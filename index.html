@@ -3,224 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hanzz Store</title>
+<title>Website Jualan</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('https://files.catbox.moe/9w0n8y.jpg') no-repeat center center fixed;
-  background-size: cover;
   color: white;
+  background: url('https://i.pinimg.com/originals/5b/3c/2f/5b3c2f0b0f1b0a0d9a0a0a0a0a0a0a.jpg') no-repeat center center/cover;
 }
 
-/* overlay gelap */
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
+/* overlay biar teks jelas */
+.overlay {
   background: rgba(0,0,0,0.6);
-  top: 0;
-  left: 0;
-  z-index: -1;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* HEADER */
-header {
+/* header */
+.header {
   text-align: center;
+  padding: 30px 10px;
+}
+
+.header h1 {
+  font-size: 32px;
+}
+
+/* product box */
+.box {
+  background: rgba(255,255,255,0.1);
   padding: 15px;
-  font-size: 22px;
-  font-weight: bold;
+  margin: 10px 0;
+  border-radius: 12px;
 }
 
-/* MENU */
-.menu {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.menu a {
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: white;
-  background: #25D366;
-}
-
-/* GRID */
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  padding: 15px;
-}
-
-/* BORDER PELANGI */
-.card {
-  padding: 2px;
-  border-radius: 15px;
-  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet, red);
-  background-size: 400% 400%;
-  animation: rainbow 6s linear infinite;
-}
-
-.inner {
-  background: rgba(255,255,255,0.05);
-  border-radius: 13px;
-  padding: 10px;
-  text-align: center;
-}
-
-@keyframes rainbow {
-  0% {background-position:0%}
-  100% {background-position:400%}
-}
-
-img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 8px;
-  width: 100%;
-  border: none;
-  border-radius: 10px;
-  background: #3b82f6;
-  color: white;
-  cursor: pointer;
-}
-
-/* PAYMENT */
+/* payment rainbow border */
 .payment {
-  margin: 20px;
+  margin-top: 20px;
   padding: 15px;
-  background: rgba(255,255,255,0.05);
   border-radius: 15px;
+  border: 3px solid;
+  border-image: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet) 1;
+  background: rgba(0,0,0,0.4);
   text-align: center;
 }
 
-.copy-btn {
-  margin-left: 10px;
-  padding: 3px 8px;
-  border: none;
-  border-radius: 5px;
-  background: yellow;
-  color: black;
-  cursor: pointer;
+/* QR image */
+.qr {
+  width: 200px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
-/* ROKET */
-.rocket {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  font-size: 30px;
-  animation: fly 2s infinite;
-}
-
-@keyframes fly {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+/* button */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #00c853;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
 }
 </style>
 
 </head>
+
 <body>
+<div class="overlay">
 
-<header>🚀 Hanzz Store 🚀</header>
-
-<!-- CHAT ADMIN -->
-<div class="menu">
-  <a href="https://wa.me/62895410354446?text=Halo%20admin%20saya%20mau%20tanya%20produk">
-    💬 Chat Admin
-  </a>
-</div>
-
-<!-- PRODUK -->
-<div class="container">
-
-  <div class="card">
-    <div class="inner">
-      <img src="https://source.unsplash.com/200x200/?android">
-      <h3>Japost 🚀</h3>
-      <p>Rp2.000</p>
-      <button onclick="beli('Japost - Rp2.000')">Beli</button>
-    </div>
+  <div class="header">
+    <h1>Website Jualan Digital</h1>
+    <p>Produk murah & bisa nego harga</p>
   </div>
 
-  <div class="card">
-    <div class="inner">
-      <img src="https://source.unsplash.com/200x200/?server">
-      <h3>Panel Run Bot Unli 🚀</h3>
-      <p>Rp5.000</p>
-      <button onclick="beli('Panel Run Bot Unli - Rp5.000')">Beli</button>
-    </div>
+  <div class="box">
+    <h3>🔥 Produk Premium</h3>
+    <p>- Apk Premium (Japost) = Rp 2.000</p>
+    <p>- Panel Run Bot Unli = Rp 5.000</p>
+    <p>- Nokos WA Indo = Rp 5.000</p>
   </div>
 
-  <div class="card">
-    <div class="inner">
-      <img src="https://source.unsplash.com/200x200/?whatsapp">
-      <h3>Nokos WA Indo 🚀</h3>
-      <p>Rp7.000</p>
-      <button onclick="beli('Nokos WA Indo - Rp7.000')">Beli</button>
-    </div>
+  <div class="payment">
+    <h3>💳 Payment QRIS</h3>
+    <p>Scan atau download QRIS di bawah</p>
+
+    <!-- ganti link QRIS kamu di sini -->
+    <img class="qr" src="https://via.placeholder.com/200x200.png?text=QRIS" alt="QRIS">
+
+    <br>
+    <a class="btn" href="https://via.placeholder.com/200x200.png?text=QRIS" download>
+      Download QRIS
+    </a>
   </div>
 
 </div>
-
-<!-- PEMBAYARAN -->
-<div class="payment">
-  <h2>💳 Metode Pembayaran</h2>
-
-  <p>
-    DANA: <b id="dana">08984800635</b>
-    <button class="copy-btn" onclick="copyText('dana')">Salin</button>
-  </p>
-
-  <p>
-    GoPay: <b id="gopay">08984800635</b>
-    <button class="copy-btn" onclick="copyText('gopay')">Salin</button>
-  </p>
-
-  <p>QRIS:</p>
-  <img src="https://files.catbox.moe/uz0x19.png" width="200">
-
-  <br><br>
-
-  <a href="https://files.catbox.moe/uz0x19.png" download>
-    <button style="background: yellow; color: black;">⬇️ Unduh QRIS</button>
-  </a>
-
-  <p style="color:yellow; margin-top:10px;">
-    ⚠️ Setelah pembayaran, kirim bukti ke WhatsApp admin
-  </p>
-</div>
-
-<div class="rocket">🚀</div>
-
-<!-- SOUND ANIME -->
-<audio autoplay loop>
-  <source src="https://files.catbox.moe/6nwjxj.mp3" type="audio/mp3">
-</audio>
-
-<script>
-function beli(nama) {
-  let nomor = "62895410354446";
-  let pesan = "Halo admin, saya mau beli " + nama + ". Saya akan kirim bukti pembayaran.";
-  window.location.href = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
-}
-
-function copyText(id) {
-  let text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text);
-  alert("Nomor berhasil disalin!");
-}
-</script>
-
 </body>
-  </html>
+</html>
