@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanzz Store</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://files.catbox.moe/9w0n8y.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.menu {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.menu a {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  background: #25D366;
+  margin: 5px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.card, .payment {
+  padding: 1px;
+  border-radius: 15px;
+  background: linear-gradient(270deg,
+    rgba(255,0,0,0.5),
+    rgba(255,165,0,0.5),
+    rgba(255,255,0,0.5),
+    rgba(0,255,0,0.5),
+    rgba(0,255,255,0.5),
+    rgba(0,0,255,0.5),
+    rgba(138,43,226,0.5),
+    rgba(255,0,0,0.5)
+  );
+  background-size: 400% 400%;
+  animation: rainbow 8s linear infinite;
+}
+
+.inner, .payment-content {
+  background: rgba(0,0,0,0.4);
+  border-radius: 14px;
+  padding: 10px;
+  text-align: center;
+}
+
+@keyframes rainbow {
+  0% {background-position:0%}
+  100% {background-position:400%}
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.copy-btn {
+  margin-left: 10px;
+  padding: 3px 8px;
+  border: none;
+  border-radius: 5px;
+  background: yellow;
+  color: black;
+  cursor: pointer;
+}
+
+.payment img {
+  max-width: 200px;
+  width: 100%;
+}
+
+.rocket {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 30px;
+  animation: fly 2s infinite;
+}
+
+@keyframes fly {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<header>🚀 Hanzz Store 🚀</header>
+
+<div class="menu">
+  <a href="https://wa.me/62895410354446?text=Halo%20admin%20saya%20mau%20tanya%20produk">
+    💬 CONTACT REHAN😎
+  </a>
+
+  <a href="#" onclick="openFAQ()" style="background:#f59e0b;">
+    ❓ FAQ
+  </a>
+</div>
+
+<div class="container">
+
+  <div class="card"><div class="inner">
+    <img src="https://source.unsplash.com/200x200/?android">
+    <h3>Japost 📨</h3>
+    <p>Rp2.000</p>
+    <p style="color:lightgreen;">TERSEDIA</p>
+    <button onclick="beli('Japost - Rp2.000')">Beli</button>
+  </div></div>
+
+  <div class="card"><div class="inner">
+    <img src="https://source.unsplash.com/200x200/?server">
+    <h3>Panel Run Bot Unli 🚀</h3>
+    <p>Rp12.000</p>
+    <p style="color:red;">BELUM TERSEDIA</p>
+    <button onclick="beli('Panel Run Bot Unli - Rp12.000')">Beli</button>
+  </div></div>
+
+  <div class="card"><div class="inner">
+    <img src="https://source.unsplash.com/200x200/?whatsapp">
+    <h3>Nokos WA Indo ✅</h3>
+    <p>Rp7.000</p>
+    <p style="color:lightgreen;">TERSEDIA</p>
+    <button onclick="beli('Nokos WA Indo - Rp7.000')">Beli</button>
+  </div></div>
+
+  <div class="card"><div class="inner">
+    <img src="https://source.unsplash.com/200x200/?robot">
+    <h3>JADI BOT WHATSAPP 🤖</h3>
+    <p>Rp10.000</p>
+    <p style="color:red;">BELUM TERSEDIA</p>
+    <button onclick="beli('BOT WhatsApp - Rp10.000')">Beli</button>
+  </div></div>
+
+</div>
+
+<!-- DESKRIPSI (SUDAH DIGANTI) -->
+<div class="payment">
+  <div class="payment-content">
+
+    <h2>📌 Tentang Produk</h2>
+
+    <p><b>🤖 JADI BOT WHATSAPP:</b> Nomer whatsapp yang kamu mau jadikan bot milik pribadi.</p>
+
+    <p><b>🚀 Panel Run Unlimited:</b> Panel server untuk menjalankan bot tanpa batas (unli), cocok untuk hosting bot WhatsApp atau script online.</p>
+
+    <p><b>⚡ Japost:</b> Jasa posting / jasa promosi yang bisa membantu posting ke target tertentu dengan cepat.</p>
+
+    <p><b>📱 Nokos WA Indo:</b> Nomor kosong WhatsApp (tanpa kartu fisik) yang bisa dipakai untuk verifikasi atau kebutuhan akun baru.</p>
+
+  </div>
+</div>
+
+<!-- PAYMENT -->
+<div class="payment">
+  <div class="payment-content">
+
+    <h2>💳 Metode Pembayaran</h2>
+    <h3>Bayar dulu baru klik beli</h3>
+
+    <p>
+      DANA: <b id="dana">08984800635</b>
+      <button class="copy-btn" onclick="copyText('dana')">Salin</button>
+    </p>
+
+    <p>
+      GoPay: <b id="gopay">08984800635</b>
+      <button class="copy-btn" onclick="copyText('gopay')">Salin</button>
+    </p>
+
+    <p>QRIS:</p>
+    <img src="https://ibb.co.com/0R5xh3Xr" width="200">
+
+    <br><br>
+
+    <a href="https://ibb.co.com/0R5xh3Xr" download>
+      <button style="background: yellow; color: black;">⬇️ Unduh QRIS</button>
+    </a>
+
+    <p style="color:yellow;">⚠️ Setelah pembayaran, kirim bukti ke WhatsApp admin</p>
+
+  </div>
+</div>
+
+<div class="rocket">🚀</div>
+
+<audio autoplay loop>
+  <source src="https://files.catbox.moe/6nwjxj.mp3">
+</audio>
+
+<!-- FAQ FULL -->
+<div id="faqBox" style="
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:85%;
+max-width:400px;
+background:#111;
+padding:15px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(255,255,255,0.2);
+z-index:999;
+color:white;
+">
+
+<h2>❓ FAQ - Rehan Store</h2>
+
+<p><b>Q: Apakah aman beli di sini?</b><br>
+A: Iya, 100% amanah & proses cepat.</p>
+
+<p><b>Q: Setelah bayar harus ngapain?</b><br>
+A: Kirim bukti ke WhatsApp admin.</p>
+
+<p><b>Q: Produk BOT itu apa?</b><br>
+A: Bot WhatsApp otomatis dengan fitur tertentu.</p>
+
+<p><b>Q: Kalau stok habis gimana?</b><br>
+A: Stok akan diubah menjadi "TIDAK TERSEDIA" oleh admin.</p>
+
+<p><b>Q: Bagaimana cara beli nya?</b><br>
+A:
+1. Pilih barang yang anda mau dan ada di stok<br>
+2. Lanjutkan ke metode pembayaran di bawah<br>
+3. Klik tombol beli lalu kirim bukti transfer ke admin<br>
+4. Admin akan kirim barang ke nomor kamu
+</p>
+
+<button onclick="closeFAQ()" style="width:100%;padding:8px;background:red;color:white;border:none;border-radius:10px;">
+Tutup
+</button>
+
+</div>
+
+<script>
+function beli(nama) {
+  let nomor = "62895410354446";
+  let pesan = "Halo admin, saya mau beli " + nama + ". Saya kirim bukti ya.";
+  window.location.href = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
+}
+
+function copyText(id) {
+  let text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  alert("Disalin!");
+}
+
+function openFAQ(){ document.getElementById("faqBox").style.display="block"; }
+function closeFAQ(){ document.getElementById("faqBox").style.display="none"; }
+</script>
+
+</body>
+  </html>
