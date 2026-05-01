@@ -131,8 +131,13 @@ button {
   <a href="https://wa.me/62895410354446?text=Halo%20admin%20saya%20mau%20tanya%20produk">
     💬 CONTACT REHAN😎
   </a>
+  
 </div>
-
+  <a href="#" onclick="openFAQ()" style="background:#f59e0b; margin-left:10px;">
+    ❓ FAQ
+  </a>
+</div>
+  
 <div class="container">
 
   <div class="card">
@@ -177,6 +182,22 @@ button {
   
 </div>
 
+  <!-- DESKRIPSI -->
+<div class="payment">
+  <h2>📌 Tentang Produk</h2>
+
+  <p><b>🤖 JADI BOT WHATSAPP:</b> Nomer whatsapp yang kamu mau jadikan bot milik pribadi.</p>
+
+  <p><b>🚀 Panel Run Unlimited:</b> Panel server untuk menjalankan bot tanpa batas (unli), cocok untuk hosting bot WhatsApp atau script online.</p>
+
+  <p><b>⚡ Japost:</b> Jasa posting / jasa promosi yang bisa membantu posting ke target tertentu dengan cepat.</p>
+
+  <p><b>📱 Nokos WA Indo:</b> Nomor kosong WhatsApp (tanpa kartu fisik) yang bisa dipakai untuk verifikasi atau kebutuhan akun baru.</p>
+
+  <br>
+
+</div>
+  
 <div class="payment">
   <h2>💳 Metode Pembayaran</h2>
   <h2> KALO MAU BELI BAYAR DULU BARU PENCET BELI! </h2>
@@ -223,5 +244,55 @@ function copyText(id) {
 }
 </script>
 
+  <div id="faqBox" style="
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:85%;
+max-width:400px;
+background:#111;
+padding:15px;
+border-radius:15px;
+box-shadow:0 0 15px rgba(255,255,255,0.2);
+z-index:999;
+color:white;
+">
+
+  <h2>❓ FAQ - Rehan Store</h2>
+
+  <p><b>Q: Apakah aman beli di sini?</b><br>A: Iya, 100% amanah & proses cepat.</p>
+
+  <p><b>Q: Setelah bayar harus ngapain?</b><br>A: Kirim bukti ke WhatsApp admin.</p>
+
+  <p><b>Q: Produk BOT itu apa?</b><br>A: Bot WhatsApp otomatis dengan fitur tertentu.</p>
+
+  <p><b>Q: Kalau stok habis gimana?</b><br>A: Akan diubah jadi "KOSONG" oleh admin.</p>
+
+  <button onclick="closeFAQ()" style="
+  margin-top:10px;
+  width:100%;
+  padding:8px;
+  border:none;
+  border-radius:10px;
+  background:red;
+  color:white;
+  cursor:pointer;
+  ">
+  Tutup
+  </button>
+  </div>
+  
 </body>
   </html>
+
+<script>
+function openFAQ() {
+  document.getElementById("faqBox").style.display = "block";
+}
+
+function closeFAQ() {
+  document.getElementById("faqBox").style.display = "none";
+}
+</script>
