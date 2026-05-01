@@ -135,6 +135,11 @@ button {
 <header>🚀 Hanzz Store 🚀</header>
 
 <div class="menu">
+  <a href="https://whatsapp.com/channel/0029VbCRYOf6WaKs1OfaGP22" 
+   style="background:#22c55e;">
+  📢 SALURAN WA
+  </a>
+  
   <a href="https://wa.me/62895410354446?text=Halo%20admin%20saya%20mau%20tanya%20produk">
     💬 CONTACT REHAN😎
   </a>
@@ -178,6 +183,19 @@ button {
     <button onclick="beli('BOT WhatsApp - Rp10.000')">Beli</button>
   </div></div>
 
+  <div class="card"><div class="inner">
+  <img src="https://source.unsplash.com/200x200/?bot,ai">
+  <h3>Sewa Bot 🤖</h3>
+
+  <select id="durasiBot" style="width:100%;padding:8px;border-radius:10px;margin-top:5px;">
+    <option value="1 Hari - Rp7.000">1 Hari - Rp7.000</option>
+    <option value="1 Minggu - Rp20.000">1 Minggu - Rp20.000</option>
+    <option value="1 Bulan - Rp50.000">1 Bulan - Rp50.000</option>
+  </select>
+
+  <button onclick="beliBot()">Beli</button>
+</div></div>
+  
 </div>
 
 <!-- DESKRIPSI (SUDAH DIGANTI) -->
@@ -286,6 +304,14 @@ function beli(nama) {
   window.location.href = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
 }
 
+ function beliBot() {
+  let nomor = "62895410354446";
+  let durasi = document.getElementById("durasiBot").value;
+
+  let pesan = "Halo admin, saya mau sewa BOT (" + durasi + "). Saya kirim bukti ya.";
+  window.location.href = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
+  }
+  
 function copyText(id) {
   let text = document.getElementById(id).innerText;
   navigator.clipboard.writeText(text);
