@@ -3,6 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ICON -->
+<link rel="icon" type="image/png" href="https://t2.pixhost.to/thumbs/7711/723227083_file_000000002b2471fa8c8e0a201b3320ab.png">
+  
 <title>Hanzz Store</title>
 
 <style>
@@ -54,7 +58,7 @@ header {
   padding: 15px;
 }
 
-.card, .payment {
+.card {
   padding: 1px;
   border-radius: 15px;
   background: linear-gradient(270deg,
@@ -71,7 +75,7 @@ header {
   animation: rainbow 8s linear infinite;
 }
 
-.inner, .payment-content {
+.inner {
   background: rgba(0,0,0,0.4);
   border-radius: 14px;
   padding: 10px;
@@ -120,18 +124,16 @@ button {
 <header>🚀 Hanzz Store 🚀</header>
 
 <div class="menu">
-  <a href="https://whatsapp.com/channel/0029VbCRYOf6WaKs1OfaGP22" 
-   style="background:#22c55e;">
-  📢 SALURAN WA
-  </a>
-  
+
+  <a href="https://whatsapp.com/channel/0029VbCRYOf6WaKs1OfaGP22">📢 SALURAN WA</a>
+
   <a href="https://wa.me/62895410354446?text=Halo%20admin%20saya%20mau%20tanya%20produk">
-    💬 CONTACT REHAN😎
+  💬 CONTACT REHAN😎
   </a>
 
-  <a href="#" onclick="openFAQ()" style="background:#f59e0b;">
-    ❓ FAQ
-  </a>
+  <a href="#" onclick="openFAQ()">❓ FAQ</a>
+  <a href="#" style="background:#f59e0b;" onclick="openCara()">📌 CARA PEMBELIAN</a>
+
 </div>
 
 <div class="container">
@@ -144,137 +146,55 @@ button {
     <button onclick="beli('Japost - Rp2.000')">Beli</button>
   </div></div>
 
-  <div class="card"><div class="inner">
-    <img src="https://source.unsplash.com/200x200/?server">
-    <h3>Panel Run Bot Unli 🚀</h3>
-    <p>Rp12.000</p>
-    <p style="color:lightgreen;">TERSEDIA</p>
-    <button onclick="beli('Panel Run Bot Unli - Rp12.000')">Beli</button>
-  </div></div>
-
-  <div class="card"><div class="inner">
-    <img src="https://source.unsplash.com/200x200/?whatsapp">
-    <h3>Nokos WA Indo ✅</h3>
-    <p>Rp7.000</p>
-    <p style="color:lightgreen;">TERSEDIA</p>
-    <button onclick="beli('Nokos WA Indo - Rp7.000')">Beli</button>
-  </div></div>
-
-  <div class="card"><div class="inner">
-    <img src="https://source.unsplash.com/200x200/?robot">
-    <h3>JADI BOT WHATSAPP 🤖</h3>
-    <p>Rp10.000</p>
-    <p style="color:lightgreen;">TERSEDIA</p>
-    <button onclick="beli('BOT WhatsApp - Rp10.000')">Beli</button>
-  </div></div>
-
-  <div class="card"><div class="inner">
-  <img src="https://source.unsplash.com/200x200/?bot,ai">
-  <h3>Sewa Bot 🤖</h3>
-
-  <select id="durasiBot" style="width:100%;padding:8px;border-radius:10px;margin-top:5px;">
-    <option value="1 Hari - Rp2.000">1 Hari - Rp2.000</option>
-    <option value="1 Minggu - Rp7.000">1 Minggu - Rp7.000</option>
-    <option value="1 Bulan - Rp15.000">1 Bulan - Rp15.000</option>
-  </select>
-
-  <button onclick="beliBot()">Beli</button>
-</div></div>
-  
-</div>
-
-<!-- DESKRIPSI -->
-<div class="payment">
-  <div class="payment-content">
-
-    <h2>📌 Tentang Produk</h2>
-
-    <p><b>🤖 JADI BOT WHATSAPP:</b> Nomer whatsapp yang kamu mau jadikan bot milik pribadi.</p>
-
-    <p><b>🚀 Panel Run Unlimited:</b> Panel server untuk menjalankan bot tanpa batas (unli), cocok untuk hosting bot WhatsApp atau script online.</p>
-
-    <p><b>⚡ Japost:</b> Jasa posting / jasa promosi yang bisa membantu posting ke target tertentu dengan cepat.</p>
-
-    <p><b>📱 Nokos WA Indo:</b> Nomor kosong WhatsApp (tanpa kartu fisik) yang bisa dipakai untuk verifikasi atau kebutuhan akun baru.</p>
-
-    <p><b>🤖 Sewa Bot Jaga Grup WA:</b> Bot otomatis untuk menjaga grup WhatsApp tetap aman & rapi. 
-Fitur: anti link, anti spam, welcome message, auto respon, dan lainnya. 
-Cocok untuk admin grup biar gak ribet mantau 24 jam 🔥</p>
-    
-  </div>
 </div>
 
 <div class="rocket">🚀</div>
 
-<audio autoplay loop>
-  <source src="https://files.catbox.moe/6nwjxj.mp3">
-</audio>
-
 <!-- FAQ -->
-<div id="faqBox" style="
-display:none;
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:85%;
-max-width:400px;
-background:#111;
-padding:15px;
-border-radius:15px;
-box-shadow:0 0 15px rgba(255,255,255,0.2);
-z-index:999;
-color:white;
-">
+<div id="faqBox" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:85%;max-width:400px;background:#111;padding:15px;border-radius:15px;z-index:999;color:white;">
 
-<h2>❓ FAQ - Rehan Store</h2>
+<h2>❓ FAQ</h2>
 
 <p><b>Q: Apakah aman beli di sini?</b><br>
-A: Iya, 100% amanah & proses cepat.</p>
+A: Iya, aman.</p>
 
-<p><b>Q: Setelah klik beli gimana?</b><br>
-A: Kamu akan diarahkan ke website pembayaran.</p>
+<!-- DIGANTI SESUAI PERMINTAAN -->
+<p><b>Q: Apakah admin fastres?</b><br>
+A: Iya, admin fastres (fast response) dan akan membalas secepat mungkin selama online. Kalau lagi offline, mohon tunggu ya 👍</p>
 
-<p><b>Q: Produk BOT itu apa?</b><br>
-A: Bot WhatsApp otomatis dengan fitur tertentu.</p>
+<button onclick="closeFAQ()" style="width:100%;padding:8px;background:red;color:white;border:none;border-radius:10px;">Close</button>
 
-<p><b>Q: Kalau stok habis gimana?</b><br>
-A: Stok akan diubah menjadi "TIDAK TERSEDIA" oleh admin.</p>
+</div>
 
-<button onclick="closeFAQ()" style="width:100%;padding:8px;background:red;color:white;border:none;border-radius:10px;">
-Close
-</button>
+<!-- CARA PEMBELIAN -->
+<div id="caraBox" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:85%;max-width:400px;background:#111;padding:15px;border-radius:15px;z-index:999;color:white;">
+
+<h2>📌 Cara Pembelian</h2>
+
+<p>
+1. Pilih produk yang ingin dibeli<br>
+2. Klik tombol Beli<br>
+3. Kamu akan diarahkan ke halaman pembayaran<br>
+4. Lakukan pembayaran sesuai instruksi<br>
+5. Kirim bukti ke admin WhatsApp<br>
+6. Tunggu proses selesai
+</p>
+
+<button onclick="closeCara()" style="width:100%;padding:8px;background:red;color:white;border:none;border-radius:10px;">Close</button>
 
 </div>
 
 <script>
-function beli(nama) {
-
-  // simpan produk ke localStorage
+function beli(nama){
   localStorage.setItem("produkDipilih", nama);
-
-  // pindah ke web payment
-  window.location.href = "https://raeyhanwijaya77-ai.github.io/REHANSTORE-PAYMENT/";
+  window.location.href="https://raeyhanwijaya77-ai.github.io/REHANSTORE-PAYMENT/";
 }
 
-function beliBot() {
+function openFAQ(){ document.getElementById("faqBox").style.display="block"; }
+function closeFAQ(){ document.getElementById("faqBox").style.display="none"; }
 
-  let durasi = document.getElementById("durasiBot").value;
-
-  // simpan pilihan bot
-  localStorage.setItem("produkDipilih", "Sewa BOT (" + durasi + ")");
-
-  // pindah ke payment
-  window.location.href = "https://raeyhanwijaya77-ai.github.io/REHANSTORE-PAYMENT/";
-}
-
-function openFAQ(){ 
-  document.getElementById("faqBox").style.display="block"; 
-}
-
-function closeFAQ(){ 
-  document.getElementById("faqBox").style.display="none"; 
-}
+function openCara(){ document.getElementById("caraBox").style.display="block"; }
+function closeCara(){ document.getElementById("caraBox").style.display="none"; }
 </script>
 
 </body>
