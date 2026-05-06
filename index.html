@@ -6,7 +6,6 @@
 
 <title>Rehan Store</title>
 
-<!-- 🔥 ICON LOGO REHAN -->
 <link rel="icon" type="image/png" href="https://t2.pixhost.to/thumbs/7711/723227083_file_000000002b2471fa8c8e0a201b3320ab.png">
 
 <style>
@@ -124,11 +123,12 @@ button {
 
 <header>🚀 Rehan Store 🚀</header>
 
+<!-- MENU (HANYA NAVIGASI DIPERBAIKI) -->
 <div class="menu">
   <a href="https://whatsapp.com/channel/0029VbCRYOf6WaKs1OfaGP22">📢 SALURAN WA</a>
   <a href="https://wa.me/62895410354446?text=Halo%20admin%20saya%20mau%20tanya%20produk">💬 CONTACT REHAN😎</a>
-  <a href="#" onclick="openFAQ()" style="background:#f59e0b;">❓ FAQ</a>
-  <a href="#faqBox" onclick="openFAQ()" style="background:#3b82f6;">🛒 CARA BELI</a>
+  <a href="#faq">❓ FAQ</a>
+  <a href="#carabeli">🛒 CARA BELI</a>
 </div>
 
 <div class="container">
@@ -174,9 +174,8 @@ button {
 
 </div>
 
-<!-- 🔥 TENTANG PRODUK + FAQ + CARA BELI (ASLI DARI SCRIPT AWAL) -->
-<div id="faqBox" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:85%;max-width:400px;background:#111;padding:15px;border-radius:15px;z-index:999;color:white;">
-
+<!-- TENTANG PRODUK (TETAP DI BAWAH PRODUK) -->
+<div>
 <h2>📌 Tentang Produk</h2>  
 
 <p><b>🤖 JADI BOT WHATSAPP:</b> Nomer whatsapp yang kamu mau jadikan bot milik pribadi.</p>  
@@ -189,27 +188,31 @@ button {
 
 <p><b>🤖 Sewa Bot Jaga Grup WA:</b> Bot otomatis untuk menjaga grup WhatsApp tetap aman & rapi. Fitur anti link, anti spam, dll.</p>
 
+</div>
+
 <hr>
 
+<!-- CARA BELI SECTION -->
+<div id="carabeli">
 <h2>🛒 Cara Beli</h2>
 <p>
 1. Pilih produk<br>
 2. Klik tombol beli<br>
-3. Masuk halaman payment<br>
-4. Bayar & kirim bukti ke admin<br>
+3. Masuk payment<br>
+4. Bayar & kirim bukti<br>
 5. Tunggu proses
 </p>
+</div>
 
 <hr>
 
+<!-- FAQ SECTION -->
+<div id="faq">
 <h2>❓ FAQ</h2>
 
 <p><b>Q:</b> Apa kah Rehan store amanah?<br>A: Rehan store sangat amanah & terpercaya🤞.</p>
 <p><b>Q:</b> Apakah Rehan store fast respon?<br>A: Ya,Admin Rehan fastres kalo lagi on⚡.</p>
 <p><b>Q:</b> Apa tanggapan para pembeli?<br>A: pembeli sangat puas dengan barang nya🤩.</p>
-
-<button onclick="closeFAQ()" style="width:100%;padding:8px;background:red;color:white;border:none;border-radius:10px;">Close</button>
-
 </div>
 
 <div class="rocket">🚀</div>
@@ -220,14 +223,6 @@ const PAYMENT_URL = "https://raeyhanwijaya77-ai.github.io/REHANSTORE-PAYMENT/";
 
 function beli() {
   window.location.href = PAYMENT_URL;
-}
-
-function openFAQ(){
-  document.getElementById("faqBox").style.display="block";
-}
-
-function closeFAQ(){
-  document.getElementById("faqBox").style.display="none";
 }
 
 </script>
