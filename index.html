@@ -99,21 +99,6 @@ button {
   cursor: pointer;
 }
 
-.copy-btn {
-  margin-left: 10px;
-  padding: 3px 8px;
-  border: none;
-  border-radius: 5px;
-  background: yellow;
-  color: black;
-  cursor: pointer;
-}
-
-.payment img {
-  max-width: 200px;
-  width: 100%;
-}
-
 .rocket {
   position: fixed;
   bottom: 10px;
@@ -198,7 +183,7 @@ button {
   
 </div>
 
-<!-- DESKRIPSI (SUDAH DIGANTI) -->
+<!-- DESKRIPSI -->
 <div class="payment">
   <div class="payment-content">
 
@@ -219,44 +204,13 @@ Cocok untuk admin grup biar gak ribet mantau 24 jam 🔥</p>
   </div>
 </div>
 
-<!-- PAYMENT -->
-<div class="payment">
-  <div class="payment-content">
-
-    <h2>💳 Metode Pembayaran</h2>
-    <h3>Bayar dulu baru klik beli</h3>
-
-    <p>
-      DANA: <b id="dana">08984800635</b>
-      <button class="copy-btn" onclick="copyText('dana')">Salin</button>
-    </p>
-
-    <p>
-      GoPay: <b id="gopay">08984800635</b>
-      <button class="copy-btn" onclick="copyText('gopay')">Salin</button>
-    </p>
-
-    <p>QRIS:</p>
-<img src="https://i.ibb.co/0R5xh3Xr/IMG-20240501-WA0000.jpg" width="200">
-
-<br><br>
-
-<a href="https://ibb.co.com/0R5xh3Xr" download>
-      <button style="background: yellow; color: black;">⬇️ Unduh QRIS</button>
-    </a>
-
-    <p style="color:yellow;">⚠️ Setelah pembayaran, kirim bukti ke WhatsApp admin</p>
-
-  </div>
-</div>
-
 <div class="rocket">🚀</div>
 
 <audio autoplay loop>
   <source src="https://files.catbox.moe/6nwjxj.mp3">
 </audio>
 
-<!-- FAQ FULL -->
+<!-- FAQ -->
 <div id="faqBox" style="
 display:none;
 position:fixed;
@@ -278,23 +232,14 @@ color:white;
 <p><b>Q: Apakah aman beli di sini?</b><br>
 A: Iya, 100% amanah & proses cepat.</p>
 
-<p><b>Q: Setelah bayar harus ngapain?</b><br>
-A: Kirim bukti ke WhatsApp admin.</p>
+<p><b>Q: Setelah klik beli gimana?</b><br>
+A: Kamu akan diarahkan ke website pembayaran.</p>
 
 <p><b>Q: Produk BOT itu apa?</b><br>
 A: Bot WhatsApp otomatis dengan fitur tertentu.</p>
 
 <p><b>Q: Kalau stok habis gimana?</b><br>
 A: Stok akan diubah menjadi "TIDAK TERSEDIA" oleh admin.</p>
-
-<p><b>Q: Bagaimana cara beli nya?</b><br>
-A:
-1. Pilih barang yang anda mau dan ada di stok<br>
-2. Lanjutkan ke metode pembayaran di bawah<br>
-3. Klik tombol beli lalu kirim bukti transfer ke admin<br>
-4. Admin akan kirim barang ke nomor kamu<br>
-5. Tunggu admin on dan memberi mu barang nya
-</p>
 
 <button onclick="closeFAQ()" style="width:100%;padding:8px;background:red;color:white;border:none;border-radius:10px;">
 Close
@@ -304,28 +249,33 @@ Close
 
 <script>
 function beli(nama) {
-  let nomor = "62895410354446";
-  let pesan = "Halo admin, saya mau beli " + nama + ". Saya kirim bukti ya.";
-  window.location.href = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
+
+  // simpan produk ke localStorage
+  localStorage.setItem("produkDipilih", nama);
+
+  // pindah ke web payment
+  window.location.href = "https://raeyhanwijaya77-ai.github.io/REHANSTORE-PAYMENT/";
 }
 
- function beliBot() {
-  let nomor = "62895410354446";
+function beliBot() {
+
   let durasi = document.getElementById("durasiBot").value;
 
-  let pesan = "Halo admin, saya mau sewa BOT (" + durasi + "). Saya kirim bukti ya.";
-  window.location.href = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
-  }
-  
-function copyText(id) {
-  let text = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(text);
-  alert("Disalin!");
+  // simpan pilihan bot
+  localStorage.setItem("produkDipilih", "Sewa BOT (" + durasi + ")");
+
+  // pindah ke payment
+  window.location.href = "https://raeyhanwijaya77-ai.github.io/REHANSTORE-PAYMENT/";
 }
 
-function openFAQ(){ document.getElementById("faqBox").style.display="block"; }
-function closeFAQ(){ document.getElementById("faqBox").style.display="none"; }
+function openFAQ(){ 
+  document.getElementById("faqBox").style.display="block"; 
+}
+
+function closeFAQ(){ 
+  document.getElementById("faqBox").style.display="none"; 
+}
 </script>
 
 </body>
-  </html>
+</html>
